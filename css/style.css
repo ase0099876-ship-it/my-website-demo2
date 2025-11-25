@@ -1,43 +1,131 @@
 body {
-    background-color: black;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #0b0f2f, #1c1b30, #111, #1b1f3a);
+    background-size: 300% 300%;
+    animation: bgMove 8s ease-in-out infinite;
 }
 
-b {
-    color: white;
-}
-
-b {
-    text-align: center;
-    color: #fff;
-    font-size: 22px;
-    margin-bottom: 20px;
-    opacity: 0.9;
-    letter-spacing: 1px;
-}
-
-#logo,
-b {
-    background: #fff1;
-    padding: 6px;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    animation: fadeDown 0.8s ease forwards;
-}
-
-#logo:hover {
-    box-shadow: 0 0 15px #860c0c;
-    transform: scale(1.1);
-}
-
-@keyframes fadeDown {
+@keyframes bgMove {
     0% {
-        opacity: 0;
-        transform: translateY(-20px);
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
     }
 
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        background-position: 0% 50%;
     }
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+/* LOGO */
+.logo {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    z-index: 2;
+    position: relative;
+}
+
+.circle {
+    width: 85px;
+    height: 85px;
+    background: radial-gradient(circle, #4f80ff, #2a42b8);
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pulse 2.5s infinite ease-in-out;
+    filter: blur(2px);
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.2);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+.title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+/* SOCIAL CARDS */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    width: 200px;
+    margin: auto;
+    padding: 12px;
+    border-radius: 14px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(3px);
+}
+
+.card i {
+    font-size: 22px;
+}
+
+/* COLORS */
+.whatsapp {
+    background: rgba(37, 211, 102, 0.25);
+}
+
+.facebook {
+    background: rgba(24, 119, 242, 0.25);
+}
+
+.instagram {
+    background: rgba(225, 48, 108, 0.25);
+}
+
+.phone {
+    background: rgba(0, 98, 255, 0.25);
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
