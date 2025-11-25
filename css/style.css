@@ -1,94 +1,112 @@
-/* BACKGROUND ثابتة بدون حركة */
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: url(../imag/imag.jpeg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(1px);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #1a0131;
-    /* خلفية نيون غامقة */
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
 }
 
-.neon-container {
-    position: relative;
+.container {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 30px 40px;
+    border-radius: 20px;
     text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
-/* LOGO بدون دائرة */
-.neon-logo {
-    position: relative;
-    margin-bottom: 10px;
+.logo-box img {
+    width: 170px;
+    border-radius: 15px;
+    animation: float 3s infinite ease-in-out;
 }
 
-.neon-logo h1 {
-    font-size: 42px;
-    color: #0ff;
-    text-shadow:
-        0 0 8px #0ff,
-        0 0 20px #0ff,
-        0 0 35px #00eaff;
-    letter-spacing: 4px;
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
-/* شيلنا .circle-glow بالكامل */
-
-/* SUBTEXT */
-.sub-text {
-    color: #fff;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
-    font-size: 19px;
-    text-shadow: 0 0 10px #fff;
+.title {
+    color: white;
+    font-size: 24px;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 12px;
+    letter-spacing: 1px;
 }
 
-/* BUTTONS */
-.neon-links {
+.links {
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
-.neon-btn {
-    width: 230px;
-    margin: auto;
-    padding: 12px;
-    font-size: 20px;
-    border-radius: 15px;
-    text-decoration: none;
-    color: white;
+
+
+.item:hover {
+    transform: scale(1.15);
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.whatsapp i {
+    color: #00e676;
+}
+
+.facebook i {
+    color: #1877F2;
+}
+
+.instagram i {
+    color: #ff4081;
+}
+
+.phone i {
+    color: #2979ff;
+}
+
+.item {
+    width: 270px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.12);
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    gap: 12px;
-    border: 2px solid transparent;
-    transition: 0.3s;
-    justify-content: center;
+    gap: 35px;
+    border-radius: 15px;
+    padding-left: 15px;
+    font-size: 28px;
+    transition: .3s;
 }
 
-/* neon glow presets */
-.whats {
-    border-color: #25D366;
-    box-shadow: 0 0 12px #25D366;
+.item span {
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 
-.face {
-    border-color: #1A73E8;
-    box-shadow: 0 0 12px #1A73E8;
-}
-
-.insta {
-    border-color: #ff2a7f;
-    box-shadow: 0 0 12px #ff2a7f;
-}
-
-.phone {
-    border-color: #0084ff;
-    box-shadow: 0 0 12px #0084ff;
-}
-
-.neon-btn:hover {
-    transform: scale(1.12);
-    box-shadow: 0 0 25px #0ff, inset 0 0 20px #0ff;
+.item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
 }
