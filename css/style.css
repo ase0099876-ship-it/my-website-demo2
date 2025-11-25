@@ -1,112 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
 body {
-    background: url(../imag/imag.jpeg);
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(1px);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    background: rgba(0, 0, 0, 0.65);
-    padding: 30px 40px;
-    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    background-image: url(../imag/download.jpeg);
 }
 
-.logo-box img {
-    width: 170px;
-    border-radius: 15px;
-    animation: float 3s infinite ease-in-out;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-8px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-.title {
+b {
     color: white;
-    font-size: 24px;
-    margin: 20px 0;
-    background: rgba(255, 255, 255, 0.1);
-    display: inline-block;
-    padding: 8px 20px;
-    border-radius: 12px;
-    letter-spacing: 1px;
 }
 
-.links {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+div {
+    background-color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
 }
 
-
-
-.item:hover {
-    transform: scale(1.15);
-    background: rgba(255, 255, 255, 0.30);
+div:hover {
+    box-shadow: 0 0 15px #860c0c;
+    transform: scale(1.1);
 }
 
-.whatsapp i {
-    color: #00e676;
-}
-
-.facebook i {
-    color: #1877F2;
-}
-
-.instagram i {
-    color: #ff4081;
-}
-
-.phone i {
-    color: #2979ff;
-}
-
-.item {
-    width: 270px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.12);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 35px;
+div {
+    background: rgba(255, 253, 253, 0.562);
+    padding: 6px;
     border-radius: 15px;
-    padding-left: 15px;
-    font-size: 28px;
-    transition: .3s;
+    transition: all 0.4s ease;
+
 }
 
-.item span {
-    font-size: 20px;
-    color: white;
-    letter-spacing: 1px;
-    font-weight: 500;
-}
-
-.item:hover {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.25);
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px #9370db, 0 0 15px #9370db;
+    margin-top: 20px;
 }
